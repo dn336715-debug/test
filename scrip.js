@@ -1,29 +1,23 @@
-function toggleMenu() {
-    let sidebar = document.getElementById("sidebar");
-    sidebar.style.left = (sidebar.style.left === "0px") ? "-250px" : "0px";
+// TAB
+function openTab(id) {
+    document.querySelectorAll(".content").forEach(c => c.classList.remove("active"));
+    document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+
+    document.getElementById(id).classList.add("active");
+    event.target.classList.add("active");
 }
 
-const links = document.querySelectorAll(".nav-item");
+// SEARCH
+const searchInput = document.getElementById("searchInput");
 
-links.forEach(link => {
-    link.addEventListener("click", () => {
-        links.forEach(l => l.classList.remove("active"));
-        link.classList.add("active");
-        document.getElementById("sidebar").style.left = "-250px";
+if (searchInput) {
+    searchInput.addEventListener("keyup", () => {
+        let value = searchInput.value.toLowerCase();
+        let cards = document.querySelectorAll(".card");
+
+        cards.forEach(card => {
+            let text = card.textContent.toLowerCase();
+            card.style.display = text.includes(value) ? "block" : "none";
+        });
     });
-});
-
-window.addEventListener("scroll", () => {
-    let sections = document.querySelectorAll(".step");
-
-    sections.forEach((section, index) => {
-        let top = window.scrollY;
-        let offset = section.offsetTop - 120;
-        let height = section.offsetHeight;
-
-        if (top >= offset && top < offset + height) {
-            links.forEach(l => l.classList.remove("active"));
-            links[index].classList.add("active");
-        }
-    });
-});
+}
