@@ -5,97 +5,80 @@ body {
     color: white;
 }
 
-/* Sidebar */
-.sidebar {
-    position: fixed;
-    left: -250px;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background: #020617;
-    padding-top: 20px;
-    transition: 0.3s;
-}
-
-/* Nav */
-.nav-item {
+/* NAVBAR */
+.navbar {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    padding: 12px 20px;
-    color: #94a3b8;
-    text-decoration: none;
+    background: #020617;
+    padding: 10px 20px;
 }
 
-.nav-item:hover {
+.navbar input {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* TAB */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.tab {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
     background: #1e293b;
-    color: #38bdf8;
-}
-
-.nav-item.active {
-    background: #1e293b;
-    color: #38bdf8;
-    border-left: 3px solid #38bdf8;
-}
-
-/* Menu */
-.menu-btn {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    font-size: 24px;
+    color: white;
     cursor: pointer;
+    border-radius: 6px;
 }
 
-/* Content */
-.container {
+.tab.active {
+    background: #38bdf8;
+}
+
+/* CONTENT */
+.content {
+    display: none;
     padding: 20px;
-    max-width: 900px;
-    margin: auto;
 }
 
-.step {
+.content.active {
+    display: block;
+}
+
+/* CARD */
+.card {
     background: #1e293b;
+    margin: 10px;
     padding: 15px;
-    margin: 20px 0;
     border-radius: 10px;
     transition: 0.3s;
 }
 
-.step:hover {
-    transform: translateY(-5px);
+.card:hover {
     background: #334155;
+    transform: scale(1.05);
 }
 
-/* Table */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-th, td {
-    border: 1px solid #334155;
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
     padding: 10px;
+    background: #38bdf8;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
 }
 
-th {
-    background: #1e293b;
-    color: #38bdf8;
-}
-
-tr:hover {
-    background: #334155;
-}
-
-/* Code */
-pre {
-    background: #020617;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-/* Smooth */
-html {
-    scroll-behavior: smooth;
+/* BACK */
+.back {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
 }
