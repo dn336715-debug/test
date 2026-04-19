@@ -2,123 +2,45 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lộ Trình AI Engineer</title>
-
+<title>IT Roadmap</title>
 <link rel="stylesheet" href="style.css">
-
-<!-- ICON -->
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
 
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
-
-<div id="sidebar" class="sidebar">
-    <a href="#step1" class="nav-item"><i class='bx bx-code-alt'></i> Nền tảng</a>
-    <a href="#step2" class="nav-item"><i class='bx bx-data'></i> Dữ liệu</a>
-    <a href="#step3" class="nav-item"><i class='bx bx-brain'></i> Machine Learning</a>
-    <a href="#step4" class="nav-item"><i class='bx bx-chip'></i> Deep Learning</a>
-    <a href="#step5" class="nav-item"><i class='bx bx-bot'></i> AI nâng cao</a>
-    <a href="#step6" class="nav-item"><i class='bx bx-cloud'></i> Deployment</a>
-    <a href="#step7" class="nav-item"><i class='bx bx-rocket'></i> Dự án</a>
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>🚀 IT Roadmap</h2>
+    <input type="text" id="searchInput" placeholder="🔍 Tìm nội dung...">
 </div>
 
-<div class="container">
-<h1>Lộ Trình AI Engineer 🚀</h1>
-
-<!-- STEP 1 -->
-<div id="step1" class="step">
-<h2>1. Nền Tảng</h2>
-
-<h3>🐍 Python cơ bản</h3>
-<table>
-<tr><th>Chủ đề</th><th>Nội dung</th></tr>
-<tr><td>Cú pháp</td><td>Biến, indentation</td></tr>
-<tr><td>Kiểu dữ liệu</td><td>int, float, list, dict</td></tr>
-<tr><td>Toán tử</td><td>+, -, *, /</td></tr>
-<tr><td>Điều kiện</td><td>if / else</td></tr>
-<tr><td>Vòng lặp</td><td>for / while</td></tr>
-<tr><td>Hàm</td><td>def / return</td></tr>
-<tr><td>OOP</td><td>class / object</td></tr>
-<tr><td>File</td><td>đọc ghi file</td></tr>
-</table>
-
-<pre><code>
-def greet(name):
-    return "Xin chào " + name
-
-print(greet("Đăng"))
-</code></pre>
-
-<ul>
-<li>Toán: Đại số tuyến tính, xác suất</li>
-<li>DSA: cấu trúc dữ liệu</li>
-</ul>
+<!-- TAB -->
+<div class="tabs">
+    <button onclick="openTab('security')" class="tab active">ATTT</button>
+    <button onclick="openTab('system')" class="tab">HTTT</button>
+    <button onclick="openTab('ai')" class="tab">AI</button>
 </div>
 
-<!-- STEP 2 -->
-<div id="step2" class="step">
-<h2>2. Xử lý dữ liệu</h2>
-<table>
-<tr><th>Công cụ</th><th>Mô tả</th></tr>
-<tr><td>Numpy</td><td>Xử lý số liệu</td></tr>
-<tr><td>Pandas</td><td>Xử lý bảng dữ liệu</td></tr>
-<tr><td>Matplotlib</td><td>Vẽ biểu đồ</td></tr>
-</table>
+<!-- CONTENT -->
+<div id="security" class="content active">
+    <div class="card">Networking + Linux</div>
+    <div class="card">Web Security</div>
+    <div class="card">Ethical Hacking</div>
+    <a href="step1.html" class="btn">Vào học →</a>
 </div>
 
-<!-- STEP 3 -->
-<div id="step3" class="step">
-<h2>3. Machine Learning</h2>
-<ul>
-<li>Supervised Learning</li>
-<li>Unsupervised Learning</li>
-<li>Scikit-learn</li>
-</ul>
+<div id="system" class="content">
+    <div class="card">OOP + DSA</div>
+    <div class="card">Database</div>
+    <div class="card">Backend</div>
+    <a href="step2.html" class="btn">Vào học →</a>
 </div>
 
-<!-- STEP 4 -->
-<div id="step4" class="step">
-<h2>4. Deep Learning</h2>
-<ul>
-<li>CNN</li>
-<li>RNN</li>
-<li>PyTorch / TensorFlow</li>
-</ul>
-</div>
-
-<!-- STEP 5 -->
-<div id="step5" class="step">
-<h2>5. AI nâng cao</h2>
-<ul>
-<li>NLP</li>
-<li>Transformer</li>
-<li>LLM</li>
-</ul>
-</div>
-
-<!-- STEP 6 -->
-<div id="step6" class="step">
-<h2>6. Deployment</h2>
-<ul>
-<li>FastAPI</li>
-<li>Docker</li>
-<li>Cloud</li>
-</ul>
-</div>
-
-<!-- STEP 7 -->
-<div id="step7" class="step">
-<h2>7. Dự án</h2>
-<ul>
-<li>Chatbot</li>
-<li>Vision AI</li>
-<li>Web AI App</li>
-</ul>
-</div>
-
+<div id="ai" class="content">
+    <div class="card">Python + Toán</div>
+    <div class="card">Machine Learning</div>
+    <div class="card">Deep Learning</div>
+    <a href="step3.html" class="btn">Vào học →</a>
 </div>
 
 <script src="script.js"></script>
